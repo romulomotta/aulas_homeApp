@@ -1,0 +1,83 @@
+{{define "_editProduct"}}
+<!-- INICIO JANELA -->
+<!-- Conteúdo -->
+<div id="editWindow" class="m-fadeOut">
+  <div
+    class="card container"
+    style="width: 60%; padding-bottom: 2%; padding-top: 2%"
+  >
+    <div class="col-sm-12">
+      <div class="card-header" style="padding-bottom: 0">
+        <h5 class="card-title" style="margin-left: 40%; margin-bottom: 1%">
+          <b>EDITAR</b>
+        </h5>
+      </div>
+    </div>
+
+    <div style="margin-left: 8%; margin-top: 2%">
+      <form method="POST" action="update">
+        <input id="setId" type="hidden" name="id" />
+        <div class="row g-2">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input
+                id="setNome"
+                type="text"
+                name="nome"
+                class="form-control"
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-5">
+            <div class="form-group">
+              <label for="preco">Preço:</label>
+              <input
+                id="setPreco"
+                type="number"
+                name="preco"
+                class="form-control"
+                step="0.01"
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="descricao">Descrição:</label>
+              <input
+                id="setDesc"
+                type="text"
+                name="descricao"
+                class="form-control"
+                value=""
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-5">
+            <div class="form-group">
+              <label for="quantidade">Quantidade:</label>
+              <input
+                id="setQtd"
+                type="number"
+                name="quantidade"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: right">
+          <a class="btn btn-info" href="/">Voltar</a>
+          <button type="submit" value="salvar" class="btn btn-success">
+            Atualizar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- FINAL JANELA -->
+{{end}}

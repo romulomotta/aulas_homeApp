@@ -1,0 +1,75 @@
+{{define "_modalProduto"}}
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cadastrar Novo Produto</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Conteúdo Modal -->
+          <form method="POST" action="insert">
+            <div class="row">
+              <div class="col-sm-8">
+                <div class="form-group">
+                  <label for="nome">Nome:</label>
+                  <input type="text" name="nome" class="form-control" />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-8">
+                <div class="form-group">
+                  <label for="descricao">Descrição:</label>
+                  <input type="text" name="descricao" class="form-control" />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-5">
+                <div class="form-group">
+                  <label for="preco">Preço:</label>
+                  <input
+                    type="number"
+                    name="preco"
+                    class="form-control"
+                    step="0.01"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-5">
+                <div class="form-group">
+                  <label for="quantidade">Quantidade:</label>
+                  <input type="number" name="quantidade" class="form-control" />
+                </div>
+              </div>
+            </div>
+            <button type="submit" value="salvar" class="btn btn-success">
+              Salvar
+            </button>
+            <a class="btn btn-info" href="/">Voltar</a>
+          </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+{{end}}
