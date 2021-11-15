@@ -7,6 +7,6 @@ import (
 
 func main() {
 	routes.LoadRoutes()
-	println("Sevidor rodando na porta 8000.")
+	println("Sevidor está rodando na porta 8000.")
 	http.ListenAndServe(":8000", nil)
 }
